@@ -1,0 +1,71 @@
+/* ==|======================
+   Layout/Socio
+   ========================= */
+
+.l-socio{
+    text-align: center;
+    
+    h1{
+        margin-top: 0.5em;
+    }
+    h5{
+        width: 50%;
+        margin: auto;
+    }
+
+.btn{
+  font-family: arial;
+  font-size:14px;
+  font-weight:700;
+  text-transform: uppercase;
+  border:none;
+  padding:10px;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.btn-green{
+  background:green;
+  color:#fff;
+  box-shadow:0 5px 0 #006000;
+}
+.btn-green:hover{
+  background:#006000;
+  box-shadow:0 5px 0 #003f00;
+}
+
+.btn-green:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
+}
+
+#background-socio{
+    width: 50%;
+    background-color: white;
+    padding-bottom: 1em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    
+    iframe{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    h5{
+        width: 100%;
+    }
+    
+    #background-socio{
+        width: 100%;
+    }
+    }
+
+}

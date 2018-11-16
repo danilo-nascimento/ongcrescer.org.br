@@ -28,5 +28,8 @@ theme_create_page('Voluntários', 'voluntarios.php');
 theme_create_page('Blog','blog.php');
 theme_create_page('Sobre','sobre.php');
 theme_create_page('faleConosco','faleConosco.php');
-theme_create_page('doe','doe.php');
+theme_create_page('Doe','doe.php');
+theme_create_page('Socio','socio.php');
+theme_create_page('EnviarProjeto','enviarProjeto.php');
+theme_create_page('Eventos','eventos.php');
 ?>

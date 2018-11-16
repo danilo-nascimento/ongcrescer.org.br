@@ -5,81 +5,43 @@ $('#menu').toggle();
 });
 });
 
-jQuery(document).ready(function(){
-		jQuery('#link-login').click( function(){
-			var dados = $(this).attr('href');
-			jQuery.ajax({
-				url: "wp-autentication.php?action=login",
-                                type: "GET",
-                                data: dados,
-                
-                beforeSend: function () {
-                    $("#modal-login").html("<div class='load' style='position: absolute; margin-top: 6em; width: 100%;' ><div style=' margin: 0 auto; width: fit-content;'> <i class='fa fa-cog fa-spin fa-5x fa-fw'></i><span class='sr-only'>Loading...</span></div> </div>");
-                    },
-                                
-                success: function(data)
-                {
-                    $("#modal-login").html(data);
-                    
-                
-                }
-                    
-			});
-			
-			return false;
-		});
-	});
-	
-jQuery(document).ready(function(){
-		jQuery('#link-cadastro').click( function(){
-			var dados = $(this).attr('href');
-			jQuery.ajax({
-				url: "wp-autentication.php?action=register",
-                                type: "GET",
-                                data: dados,
-                
-                beforeSend: function () {
-                    $("#modal-login").html("<div class='load' style='position: absolute; margin-top: 6em; width: 100%;' ><div style=' margin: 0 auto; width: fit-content;'> <i class='fa fa-cog fa-spin fa-5x fa-fw'></i><span class='sr-only'>Loading...</span></div> </div>");
-                    },
-                                
-                success: function(data)
-                {
-                    $("#modal-login").html(data);
-                    
-                
-                }
-                    
-			});
-			
-			return false;
-		});
-	});
-	
-	jQuery(document).ready(function(){
-		jQuery('#formlogin').submit( function(){
-			var form = $(this);
-			var dados = form.serialize();
-			jQuery.ajax({
-				url: "wp-autentication.php?action=login",
-                                type: "POST",
-                                data: dados,
-                
-                beforeSend: function () {
-                    $("#modal-login").html("<div class='load' style='position: absolute; margin-top: 6em; width: 100%;' ><div style=' margin: 0 auto; width: fit-content;'> <i class='fa fa-cog fa-spin fa-5x fa-fw'></i><span class='sr-only'>Loading...</span></div> </div>");
-                    },
-                                
-                success: function(data)
-                {
-                    $("#modal-login").html(data);
-                    
-                
-                }
-                    
-			});
-			
-			return false;
-		});
-	});
-	
+$('#link-login').click(function(){
+$('div#header-login form#cadastro').fadeOut(500, function(){
+$('div#header-login form#recuperar_senha').fadeOut(500, function(){
+$('div#header-login, form#login').fadeIn(500);
+});
+});
+});
+
+$('#link-cadastrar').click(function(){
+$('div#header-login form#login').fadeOut(500, function(){   
+$('div#header-login form#recuperar_senha').fadeOut(500, function(){   
+$('form#cadastro, div#header-login').fadeIn(500);
+});
+});
+});
+
+$('.logo_login div, .logo_cadastro div').click(function(){
+$('div#header-login').fadeOut(1000);
+});
+
+$('.logar').click(function(){
+$('div#header-login form:visible').fadeOut(500, function(){   
+$('form#login').fadeIn(500);
+});
+});
+
+$('.registrar').click(function(){
+$('div#header-login form:visible').fadeOut(500, function(){   
+$('form#cadastro').fadeIn(500);
+});
+});
+
+$('.recuperar').click(function(){
+   var form =  $('div#header-login form:visible');
+   form.fadeOut(500, function(){   
+$('form#recuperar_senha').fadeIn(500);
+});
+});
 
 };

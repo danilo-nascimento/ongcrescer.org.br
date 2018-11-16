@@ -1,0 +1,118 @@
+.l-eventos {
+    
+    margin-top: 1.4em;
+	padding-top: 4em;
+	padding-bottom: 1em;
+	background: $white-0;
+        
+        .title-evento {
+            text-align: left;
+            font-size: 1.8em;
+            font-weight: bold;
+	}
+        
+        .imagem-loja{
+            width: 250px;
+            height: 250px;
+            box-shadow: inset 250px 50px 50px 50px rgba(0,0,0,.7);
+        }
+
+	.titulo-caixa-evento {
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 0.82em;
+	}
+
+	a {
+		font-size: 10px;
+		color: $white-0;
+		text-align: center;
+	}
+
+	.botoes-cima {
+		margin: 1em 0 0;
+	}
+        
+        .botoes-cima a{
+		margin-bottom: 1em;
+	}
+
+	.caixa {
+    font-size: 0.9em;
+    width: 10px;
+	}
+
+
+
+i.fa.fa-heart {
+    color: red;
+    font-size: 12px;
+}
+
+.caixa-preco {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.72em;
+    text-align: center
+}
+
+.botao-queroisso {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 0.3em;
+    margin-bottom: -2em;
+}
+
+.botao-queroisso a{
+    border: solid 1px;
+    border-radius: 40px;
+}
+
+.botao-queroisso .icone{
+    color: black;
+    margin-left: 0.2em;
+    border: solid white;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.botao-queroisso i:nth-child(2)::after{
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    position: absolute;
+
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    
+    bottom: -26px;
+    left: 125px;
+
+    
+}
+
+.botao-queroisso .icone:last-child{
+padding: 0 0.2em 0 0.2em;
+}
+
+.espaco-linha {
+	margin: 2em 0 3em 0;
+        width: 25%;
+        
+}
+
+.espaco-linha-pagination {
+	margin: 5em 0 3em 0;
+
+	button {
+            font-size: 10pt;
+            color: $white-0;
+            background-color: orange;
+            border-radius: 40px;
+            padding: 0.8em 1.5em 0.8em 1.5em;
+	}
+}
+}

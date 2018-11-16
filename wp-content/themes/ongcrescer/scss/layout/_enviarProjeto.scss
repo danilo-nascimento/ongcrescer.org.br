@@ -1,0 +1,81 @@
+/* ==|======================
+   Layout/Enviar Projeto
+   ========================= */
+
+.l-enviar-projeto{
+    background-color: $white-0;
+    margin-top: 1.5em;
+    padding-top: 3em;
+
+
+#form-enviar-projeto {
+   display: inline-block;
+   width: 50%;
+}
+
+.campo-enviar-projeto{
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-top: 1em;
+    display: block;
+    width: 100%;
+}
+
+#textarea-enviar-projeto{
+    display: inline-block;
+    width: 100%;
+    margin-top: 1em;
+    height: 200px;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.enviar-enviar-projeto{
+    float: right;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 20px 50px;
+    background: -moz-linear-gradient(left, orange, #fa7306); 
+background: -webkit-linear-gradient(left, orange, #fa7306); 
+background: -o-linear-gradient(left, orange, #fa7306); 
+background: -ms-linear-gradient(left, orange, #fa7306); 
+background: linear-gradient(left, orange, #fa7306); 
+color: #fff;
+border: none;
+}
+
+.upload-btn-wrapper {
+  width: 100%;
+  margin-top: 1em;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 20pt;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.btn label{
+    font-size: 18pt;
+    margin-left: 2%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+}

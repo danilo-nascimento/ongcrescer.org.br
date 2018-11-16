@@ -10,7 +10,6 @@
  */
 ?>
 <!DOCTYPE html>
-<div id="modal-login" style="background: green; width: 100%;"></div>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -41,8 +40,8 @@
         <ul class="actions">
             <li class="li-navbar"><span><a href="">(11) 94911-6572</a></span></li>
           <li class="li-navbar"><span><a href="">Suporte</a></span></li>
-          <li class="li-navbar"><span><a id='link-login' href="">Login</a></span></li>
-          <li class="li-navbar"><span><a id='link-cadastro' href="">Cadastre-se</a></span></li>
+          <li class="li-navbar"><span><a id='link-login' >Login</a></span></li>
+          <li class="li-navbar"><span><a id='link-cadastrar'>Cadastre-se</a></span></li>
         </ul>
 
         <div class="clear"></div>
@@ -50,6 +49,7 @@
     </nav>
 
     <header class="l-header">
+    <?php echo form_login_cadastro();?>
       <div class="row-content">
         <a id="logo" href="home"><img src="<?php image_url("logo.png") ?>" alt="OngCrescer"/></a>
         <p id="dash">&#9776;</p>
