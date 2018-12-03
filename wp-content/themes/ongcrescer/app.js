@@ -177,19 +177,57 @@ jQuery(document).ready(function(){
 });
 
 require.register("js/app/header.js", function(exports, require, module) {
-window.onload = function(){ 
-$(document).ready(function (){
-$('#dash').click(function(){
-$('#menu').toggle();
-
-$('div.nav-menu li').click(function(){
-$(this).children('.sub-menu').toggle();
-});
-});
-});
-
-
-};
+window.onload = function(){
+   $(document).ready(function (){
+   
+   $('#link-login').click(function(){
+   $('div#header-login form.cadastro').fadeOut(500, function(){
+   $('div#header-login form#recuperar_senha').fadeOut(500, function(){
+   $('div#header-login, form.login').fadeIn(500);
+   });
+   });
+   });
+   
+   $('#link-cadastrar').click(function(){
+   $('div#header-login form.login').fadeOut(500, function(){   
+   $('div#header-login form#recuperar_senha').fadeOut(500, function(){   
+   $('form.cadastro, div#header-login').fadeIn(500);
+   });
+   });
+   });
+   
+   $('.logo_login div, .logo_cadastro div').click(function(){
+   $('div#header-login').fadeOut(1000);
+   });
+   
+   $('.logar').click(function(){
+   $('div#header-login form:visible').fadeOut(500, function(){   
+   $('form.login').fadeIn(500);
+   });
+   });
+   
+   $('.registrar').click(function(){
+   $('div#header-login form:visible').fadeOut(500, function(){   
+   $('form.cadastro').fadeIn(500);
+   });
+   });
+   
+   $('.recuperar').click(function(){
+      var form =  $('div#header-login form:visible');
+      form.fadeOut(500, function(){   
+   $('form#recuperar_senha').fadeIn(500);
+   });
+   });
+   
+   $('#dash').click(function(){
+   $('#menu').toggle();
+   
+   $('div.nav-menu li').click(function(){
+   $(this).children('.sub-menu').toggle();
+   });
+   });
+   });
+   };
 });
 
 require.register("js/app/home.js", function(exports, require, module) {
@@ -201,12 +239,16 @@ document.getElementById('dash').onclick = function (){
 });
 
 require.register("js/app/login.js", function(exports, require, module) {
-
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 });
 
-
-;require.register("___globals___", function(exports, require, module) {
-
+require.register("___globals___", function(exports, require, module) {
   
 });})();require('___globals___');
 

@@ -44,7 +44,7 @@
                             <img src="<?php echo $image["full_url"] ?>" alt="">
                           <?php } ?>
 
-                          <strong><?php the_title() ?></strong>
+                            <div><strong><?php the_title() ?></strong></div>
                           </a>
                         </div>
                 <?php endwhile; ?>

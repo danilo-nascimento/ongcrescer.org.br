@@ -1,12 +1,12 @@
 <?php
 
-add_action('init', 'create_post_type_evento');
+add_action('init', 'create_post_type_eventos');
 
-function create_post_type_evento() {
+function create_post_type_eventos() {
     register_post_type('ong_event', array(
         'labels' => array(
             'name' => __('Eventos'),
-            'singular_name' => __('Evento')
+            'singular_name' => __('Eventos'),
         ),
         'public' => true,
         'has_archive' => true,
@@ -44,6 +44,7 @@ function create_post_type_loja() {
         'has_archive' => true,
         'menu_icon' => 'dashicons-cart',
         'taxonomies' => array( 'category', 'post_tag' ),
+        'supports' => array('title')
             )
     );
 }
@@ -60,6 +61,7 @@ function create_post_type_voluntario() {
         'has_archive' => true,
         'menu_icon' => 'dashicons-groups',
         'taxonomies' => array( 'category', 'post_tag' ),
+        'supports' => array('title')
             )
     );
 }

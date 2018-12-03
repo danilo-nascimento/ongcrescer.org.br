@@ -3,6 +3,83 @@
    ======================= */
 
 .l-main {
-  min-height: 400px;
+    min-height: 400px;
+
+    .eventos-title{
+        margin-top: 1.5em;
+    }
+    .eventos-title:after{
+    height: 3px;
+    display: block;
+    width: 200px;
+    background: orange;
+    border-right: 1px white;
+    content: '';
+    }
+
+    .categorias-eventos li{
+        background-color: white;
+        padding: 0.8em 1em 0.8em 1em;
+        display: inline-block;
+    }
+    
+    .categorias-eventos li:first-child{
+        background-color: #f9c509;
+    }
+
+    .categorias-eventos li a{
+        font-size: 11pt;
+        color: black;
+        font-weight: 800;
+    }
+    
+    .categorias-eventos li:first-child a{
+        color: white;
+    }
+    
+    
+
+    .evento-bloco{
+        width: 100%;
+        margin: 2em 0 2em 0;
+    }
+    
+    .evento-box{
+        background-color: white;
+        width: 250px;
+        margin-bottom: 2em;
+        padding-bottom: 1em;
+    }
+
+    .imagem-evento{
+        width: 250px;
+        height: 250px;
+    }
+
+    .evento-title{
+        margin-top: 1em;
+        font-size: 11pt;
+        color: #fa6601;
+        width: 230px;
+        padding-left: 1em;
+    }
+
+    .evento-hora{
+        font-weight: 800;
+        font-size: 9pt;
+        text-align: center;
+        width: 230px;
+        padding-left: 1.5em;
+    }
+    .evento-desc{
+        width: 230px;
+        padding-left: 1em;
+    }
+    .evento-mais{
+        border: 1px solid;
+        color: black;
+        margin-left: 1em;
+    }
 }
+
 

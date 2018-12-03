@@ -16,13 +16,14 @@ function projetos_meta_box( $meta_boxes ) {
  				'name' => esc_html__( 'causas', 'metabox-online-generator' ),
  				'desc' => esc_html__( 'causas do projeto', 'metabox-online-generator' ),
  				'std' => 'causas do projeto',
- 				'size' => 60,
+				'size' => 60,
+				'required' => 'required', 
  			),
  			array(
  				'id' => $prefix . 'image',
  				'type' => 'image_advanced',
  				'name' => esc_html__( 'Imagem do projeto', 'metabox-online-generator' ),
- 				'desc' => esc_html__( 'Inserir imagem do projeto', 'metabox-online-generator' ),
+ 				'desc' => esc_html__( 'A imagem deve ter no máximo 1MB de tamanho', 'metabox-online-generator' ),
  				'max_file_uploads' => '1',
  			)
 			

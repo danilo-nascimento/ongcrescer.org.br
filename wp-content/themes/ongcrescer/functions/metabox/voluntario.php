@@ -16,7 +16,7 @@ function metabox_voluntario( $meta_boxes ) {
  				'name' => esc_html__( 'Link Perfil Voluntário', 'metabox-online-generator' ),
  				'desc' => esc_html__( 'Link Perfil Voluntário', 'metabox-online-generator' ),
  				'std' => '#',
- 				'size' => 128
+ 				'size' => 60
  			),
  			array(
  				'id' => $prefix . 'image',

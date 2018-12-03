@@ -41,8 +41,21 @@
             width: 120px;
 	}
 
+	.imagem-projetos{
+            width: 250px;
+            height: 250px;
+        }
+        
+        .espaco-linha {
+	margin: 2em 0 2em 0;
+        width: 25%;
+        
+        }
 	
-	
+        .espaco-linha div{
+        background-color: $white-1;
+        width: 250px;
+        }   
 
 	.botoes-baixo {
 		a.btn-default {
@@ -72,6 +85,35 @@
     display: inline-block;
 }
 
+.espaco-linha-pagination {
+	margin: 4em 0 1em;
+
+	div {
+            font-size: 10pt;
+		color:$white-0
+	}
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .espaco-linha {
+        width: 50%;
+}
+}
+
+@media screen and (max-width: 700px) {
+    .imagem-projetos{
+            width: 100%;
+        }
+        
+    .espaco-linha {
+        width: 100%;
+}
+
+    .espaco-linha div{
+        width: 90%;
+        }
+}
 
 
 

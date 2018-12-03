@@ -2,70 +2,141 @@
    Layout/Login
    ========================= */
 .l-login{
-    background-color: $white-0;
-    min-height: 400px;
-}
-form#login{
-    width: 45%;
-    border-right: 1px solid #ccc;
-    margin-top: 1em;
-    padding-top: 3em;
-    float: left;
-}
-form#cadastro{
-     width: 45%;
-    margin-top: 1em;
-    padding-top: 3em;
-    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
 }
 
-form#login #login-email, form#login #login-senha, form#cadastro .cadastro-email, form#cadastro .cadastro-senha{
-    width: 60%;
+div#header-login{
+    padding-top: 1em;
+    display: none;
+    width: 350px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 7px #606060;
+    background-color: #f4f4f4;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1050;
+        
+}
+form.login{
+    display: none;
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 1em;
+    background-color: #f4f4f4;
+    right: 0;
+    left: 0;
+    z-index: 1050;
+    padding-bottom: 1em;
+        
+}
+form.cadastro{
+    padding-top: 1em;
+    width: 350px;
+    margin: 0 auto;
+    display: none;
+    right: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: #f4f4f4;
+    padding-bottom: 1em;
+}
+form#recuperar_senha{
+    padding-top: 1em;
+    width: 350px;
+    margin: 0 auto;
+    display: none;
+    right: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: #f4f4f4;
+    padding-bottom: 1em;
+}
+
+div#header-login div.logo_login{
+    text-align: center;
+}
+
+div#header-login div.logo_login div{
+    font-family: arial;
+    font-weight: 800;
+    float: right;
+    font-size: 25pt;
+    margin-top: -20px;
+    margin-right: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+form.login h4, form.cadastro h4, form#recuperar_senha h4{
+    text-align: center;
+}
+
+div#header-login img{
+    width: 70px;
+    height: 70px;
+}
+
+form.login .login-email, form.login .login-senha, form.cadastro .cadastro-email, form.cadastro .cadastro-senha, form#recuperar_senha .recuperar_senha__email{
+    width: 90%;
     display: block;
-    margin-top: 1em;
+    margin: 1em 5% 0 5%;
+    padding: 0.3em 0 0.3em 0.5em;
 }
 
-form#login div, form#cadastro div{
-    width: 60%;
-}
 
-form#login input#login-entrar, form#cadastro #cadastro-entrar{
-    margin-top: 0.5em;
-    float: right;
+
+form.login input.login-entrar, form.cadastro .cadastro-entrar, form#recuperar_senha #recuperar_senha__confirmar{
+    width: 90%;
+    margin: 1em 5% 0.5em 5%;
     padding: 10px 20px;
-background: -moz-linear-gradient(left, #7B68EE, #34469b); 
-background: -webkit-linear-gradient(left, #7B68EE, #34469b); 
-background: -o-linear-gradient(left, #7B68EE, #34469b); 
-background: -ms-linear-gradient(left, #7B68EE, #34469b); 
-background: linear-gradient(left, #7B68EE, #34469b); 
-color: #fff;
-border: none;
+    background: -moz-linear-gradient(left, #7B68EE, #34469b); 
+    background: -webkit-linear-gradient(left, #7B68EE, #34469b); 
+    background: -o-linear-gradient(left, #7B68EE, #34469b); 
+    background: -ms-linear-gradient(left, #7B68EE, #34469b); 
+    background: linear-gradient(left, #7B68EE, #34469b); 
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-form#login a{
-    font-size: 0.8em;
+form.login a, form.cadastro a, form#recuperar_senha a{
+    color: #606060;
+    margin: 1em 5% 1em 5%;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
 
-form#login{
-float: none;
-width: 100%;
-border: none;
-}
+    form.login{
+        float: none;
+        width: 90%;
+        border: none;
+    }
 
-form#cadastro{
-float: none;
-width: 100%;
-margin-bottom: 2em;
-}
+    form.cadastro{
+        float: none;
+        width: 100%;
+        margin-bottom: 2em;
+    }
 
-form#login #login-email, form#login #login-senha, form#cadastro .cadastro-email, form#cadastro .cadastro-senha{
-width: 100%;
+    form.login .login-email, form.login .login-senha, form.cadastro .cadastro-email, form.cadastro .cadastro-senha{
+        width: 90%;
 
-}
+    }
 
-form#login input#login-entrar, form#cadastro #cadastro-entrar{
-    float: none;
-}
+    form.login input.login-entrar, form.cadastro .cadastro-entrar{
+        float: none;
+    }
 }

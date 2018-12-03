@@ -3,100 +3,106 @@
    ======================= */
 
 .l-blog{
-    
+
     .blog-bloco{
-            width: 100%;
-        }
-        
-figure{
-    display: block;
-    width: 100%;
-    height: 200px;
-    background-color: orange;
-}
-.imagem-fundo-blog{ 
-    position: absolute;
-}
-figcaption{
-    padding-left: 3em;
-    padding-top: 3em;
-    color: white;
-    margin-top: 2em;
-    position: relative;
-}
-
-#h2-blog{
-    margin-top: 3em;
-    position: relative;
-    border-bottom: solid orange;
-    width: fit-content;
-}
-
-.imagem-blog{
-            width: 250px;
-            height: 250px;
-        }
-        
-        .espaco-linha div{
-            background-color: white;
-            width: 250px;
-        }
-        
-        .blog-title{
-            margin-top: 1em;
-            font-size: 11pt;
-            text-align: center;
-            color: #fa6601;
-            width: 250px;
-        }
-        
-        .blog-info{
-            font-size: 9pt;
-            text-align: center;
-            width: 250px;
-        }
-        
-        .blog-conteudo{
-            font-size: 9pt;
-            width: 250px;
-        }
-        
-        #paginacao-blog{
-            text-align: center;
-            margin-top: 3em;
-            margin-bottom: 4em;
-        }
-        
-        .paginacao-blog-numeros{
-            display: inline;
-            border: lightgray solid 2px;
-            border-radius: 100%;
-            padding: 10px;
-            cursor: pointer;
-        }
-        
-        .paginacao-blog-numeros:hover{
-            background-color: black;
-            color: white;
-            border: black solid 2px;
-            transition: 1s;
-        }
-        
-        .espaco-linha-pagination {
-	margin: 4em 0 1em;
-
-	div {
-            font-size: 10pt;
-		color:$white-0
-	}
-        
-        a{
-		color:$white-0
-        }
-}
-        
-        @media screen and (max-width: 1200px) {
-    .blog-info {
+        width: 100%;
     }
-}
+
+    figure{
+        display: block;
+        width: 100%;
+        height: 200px;
+        background-color: orange;
+    }
+    .imagem-fundo-blog{ 
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    figcaption{
+        padding-left: 3em;
+        padding-top: 3em;
+        color: white;
+        margin-top: 2em;
+        position: relative;
+    }
+
+    #h2-blog{
+        margin-top: 3em;
+        position: relative;
+        border-bottom: solid orange;
+        width: fit-content;
+    }
+
+    .imagem-blog{
+        width: 250px;
+        height: 250px;
+    }
+
+    .espaco-linha{
+        margin-right: 1%;
+        margin-bottom: 1em;
+    }
+
+    .espaco-linha div{
+        background-color: white;
+        width: 250px;
+        padding-bottom: 0.2em;
+    }
+
+    .blog-title{
+        margin-top: 1em;
+        font-size: 11pt;
+        text-align: center;
+        color: #fa6601;
+        width: 250px;
+    }
+
+    .blog-info{
+        font-size: 9pt;
+        text-align: center;
+        width: 250px;
+    }
+
+    .blog-conteudo{
+        font-size: 9pt;
+        width: 250px;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #paginacao-blog{
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 4em;
+    }
+
+    .paginacao-blog-numeros{
+        display: inline;
+        border: lightgray solid 2px;
+        border-radius: 100%;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .paginacao-blog-numeros:hover{
+        background-color: black;
+        color: white;
+        border: black solid 2px;
+        transition: 1s;
+    }
+
+    .espaco-linha-pagination {
+        margin: 4em 0 1em;
+
+        div {
+            font-size: 10pt;
+            color:$white-0
+        }
+
+        a{
+            color:$white-0
+        }
+    }
+
 }

@@ -1,61 +1,42 @@
 <?php
-function metabox_evento( $meta_boxes ) {
-	$prefix = 'evento-';
+function metabox_eventos( $meta_boxes ) {
+	$prefix = 'eventos-';
 
 	$meta_boxes[] = array(
-		'id' => 'evento',
+		'id' => 'eventos',
 		'title' => esc_html__( 'Detalhes do Evento', 'metabox-online-generator' ),
 		'post_types' => array( 'ong_event' ),
 		'context' => 'advanced',
-		'priority' => 'default',
+		'priority' => 'high',
 		'autosave' => false,
 		'fields' => array(
  			array(
- 				'id' => $prefix . 'title',
+ 				'id' => $prefix . 'hora',
  				'type' => 'text',
- 				'name' => esc_html__( 'Título do Destaque', 'metabox-online-generator' ),
- 				'desc' => esc_html__( 'Título que será usado no destaque da home', 'metabox-online-generator' ),
- 				'std' => 'Título do destaque',
+ 				'name' => esc_html__( 'Data do Evento', 'metabox-online-generator' ),
+ 				'desc' => esc_html__( 'insira a data do evento', 'metabox-online-generator' ),
  				'size' => 40,
- 			),
- 			array(
- 				'id' => $prefix . 'subtitle',
- 				'type' => 'text',
- 				'name' => esc_html__( 'Subtítulo do destaque', 'metabox-online-generator' ),
- 				'desc' => esc_html__( 'Subttítulo do destaque da home', 'metabox-online-generator' ),
- 				'std' => 'Subtítulo do destaque',
- 				'placeholder' => esc_html__( 'Subtítulo do destaque', 'metabox-online-generator' ),
- 				'size' => 100,
+				'required' => 'required',
  			),
  			array(
  				'id' => $prefix . 'image',
  				'type' => 'image_advanced',
- 				'name' => esc_html__( 'Imagem do Destaque', 'metabox-online-generator' ),
- 				'desc' => esc_html__( 'Imagem de fundo do destaque', 'metabox-online-generator' ),
+ 				'name' => esc_html__( 'Imagem do evento', 'metabox-online-generator' ),
+ 				'desc' => esc_html__( 'A imagem deve ter no máximo 1MB de tamanho', 'metabox-online-generator' ),
  				'max_file_uploads' => '1',
- 			),
-			array(
-				'id' => $prefix . 'datetime-from',
-				'type' => 'datetime',
-				'name' => esc_html__( 'Data e Hora Início do Evento', 'metabox-online-generator' ),
-				'desc' => esc_html__( 'Descrição do Evento', 'metabox-online-generator' ),
-				'js_options' => array(),
-				'inline' => true,
-				'timestamp' => true,
-			),
-			array(
-				'id' => $prefix . 'datetime-to',
-				'type' => 'datetime',
-				'name' => esc_html__( 'Data e Hora Término do Evento', 'metabox-online-generator' ),
-				'desc' => esc_html__( 'Descrição do Evento', 'metabox-online-generator' ),
-				'js_options' => array(),
-				'inline' => true,
-				'timestamp' => true,
-			)
-		)
+ 			)
+		),
+               
 	);
 
 	return $meta_boxes;
 }
-add_filter( 'rwmb_meta_boxes', 'metabox_evento' );
+add_action('edit_form_after_title', function() {
+    global $post, $wp_meta_boxes;
+    do_meta_boxes(get_current_screen(), 'advanced', $post);
+    unset($wp_meta_boxes[get_post_type($post)]['advanced']);
+});
+
+add_filter( 'rwmb_meta_boxes', 'metabox_eventos' );
 ?>
+

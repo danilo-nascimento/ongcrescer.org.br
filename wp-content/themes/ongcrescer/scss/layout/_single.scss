@@ -3,31 +3,90 @@
    ========================= */
 
 .l-single{
-    text-align: center;
+    padding-top: 1em;
+    min-height: 600px;
     background-color: $white-0;
     margin-top: 1.5em;
-    padding-top: 3em;
-    
+
+    .l-eventos {
+    padding-top: 0em;
+    }
+
+    .l-projetos {
+        padding-top: 0em;
+    }
     .imagem-single{
-    width: 100%;
-    height: 300px;
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
+        position: absolute;
+        right: 10%;
+        width: 35%;
+        height: 300px;
+        margin-top: -4em;
+        padding-bottom: 2em;
+        margin-left: 5%;
+    }
+    
+    .single-title{
+        width: 50%;
+        font-size: 22pt;
+        text-align: left;
+        color: #fa6601;
+    }
+    
+    .single-data{
+        width: 50%;
+        text-align: left;
+    }
+    
+    .single-conteudo{
+        text-align: left;
+        width: 50%;
+    }
+    .single-conteudo p{
+        display: inline-block;
+    }
+    
+    .single-box{
+        min-height: 350px;
+        border-bottom: 3px solid $white-1;
+    }
 
-h1{
-    color: #fa6601;
-}
+    h5{
+        color: #fa6601;
+        padding-top: 3em;
+        padding-bottom: 1em;
+        text-align: center;
+    }
 
-h5{
-    color: #fa6601;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
+    .single-bloco{
+        min-height: 300px;
+    }
+    
+    .button-eventos{
+        margin-bottom: 1em;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .imagem-single{
+        margin-top: 0;
+        position: relative;
+        float: none;
+        width: 90%;
+    }
 
-hr{
-    margin-top: 2em;
-}
+    .single-title{
+        width: 100%;
+    }
+    
+    .single-data{
+        width: 100%;
+    }
+        
+        .single-conteudo{
+        width: 90%;
+    }
+        
+    }
+    
 }
 
 

@@ -1,3 +1,5 @@
+.l-sobre{
+
 figure{
     display: block;
     width: 100%;
@@ -32,7 +34,7 @@ figcaption{
     width: 50%;
 }
 
-.l-sobre hr{
+ hr{
  color: orange;
  background-color: orange;
  width: 200px;
@@ -54,4 +56,5 @@ figcaption{
       padding: 1.5em 1.5em;
       text-align: center;
       color: $dark-gray;
+}
 }

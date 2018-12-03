@@ -20,6 +20,7 @@ Version: 1.0
 @import "layout/header";
 @import "layout/footer";
 @import "layout/main";
+@import "layout/home";
 @import "layout/historia";
 @import "layout/premios";
 @import "layout/projetos";
@@ -35,5 +36,4 @@ Version: 1.0
 @import "layout/enviarProjeto";
 @import "layout/eventos";
 
-/* Modules */
-@import "modules/home_carousel";
+

@@ -25,19 +25,15 @@
 		</div><!-- Fim dos botões superiores e titulo loja -->
 		<div class="row-content">
 			<div class="row loja-bloco">
-
                             <?php
                             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
           
-
                 $args = array(
                     'post_type' => 'ong_loja',
                     "posts_per_page" => 4,
                     'paged' => $paged,
-                    'orderby'   => 'title',
-                    'order'     => 'ASC',
+                    'orderby'   => 'id',
                     );
-
                 $query = new WP_Query($args);
                 
                 $count_posts = wp_count_posts('ong_loja')->publish;
@@ -57,19 +53,17 @@
     ?>
 					<div class="espaco-linha"><!-- Inicio da caixinha 1 -->
 						<div class="row-content">
-                                                            <a href="<?php the_permalink();?>">
                                                             <?php if ( $image_background == TRUE){?>
                                                             <img class="imagem-loja" src="<?php echo $image_background ?>"><?php }else{?>
                                                             <img class="imagem-loja" src="<?php image_url("perfil.jpg") ?>" />
                                                             <?php }?>
-                                                            </a>
                                                             <p class="titulo-caixa-loja"><?php the_title();?></p>
                                                             <div class="caixa-preco"><strong>
 									<?php if (rwmb_meta( 'loja-preço' ) == TRUE) echo rwmb_meta( 'loja-preço' ); else echo "Valor não informado" ?>
 								</strong>
 							</div><!-- col-10 -->
 							<div class="botao-queroisso">
-								<a href="" class="btn btn-warning btn-lg">QUERO ISSO <i class="fa fa-heart"></i></a>
+								<a href="<?php if (rwmb_meta( 'loja-link' ) == TRUE) echo rwmb_meta( 'loja-link' ); ?>" target="_blank" class="btn btn-warning btn-lg">QUERO ISSO <i class="fa fa-heart"></i></a>
 							</div>
 						</div>
 						
