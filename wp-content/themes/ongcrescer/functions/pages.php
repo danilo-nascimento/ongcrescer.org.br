@@ -8,6 +8,7 @@ function theme_create_page($title, $template="", $content="sem conteúdo"){
       'post_content' => $content,
       'post_status' => 'publish',
       'post_author' => 1,
+      'page_template' => $template,
     );
     if(!isset($page_check->ID)){
       $new_page_id = wp_insert_post($new_page);
