@@ -19,6 +19,30 @@ function theme_create_page($title, $template="", $content="sem conte√∫do"){
   }
 }
 
+/**
+ *  Criador de Volunt·rios
+ */
+function theme_create_voluntarios( $name, $counter ){
+  if( $counter <= 10 ){
+    if( is_admin() ){
+      $page_name = sprintf("%s %u",$name, $counter);
+      $voluntariado_check = get_page_by_title($page_name, OBJECT, 'ong_voluntario');
+      $new_voluntariado = array(
+        'post_type' => 'ong_voluntario',
+        'post_title' => sprintf("%s %u",$name, $counter),
+        'post_status' => 'publish',
+        'post_author' => 1,
+      );
+      if(!isset($voluntariado_check->ID)){
+        $new_voluntariado_id = wp_insert_post($new_voluntariado);
+      }
+      theme_create_voluntarios( $name, ++$counter );
+    }
+  }
+}
+
+theme_create_voluntarios( "Voluntario", 1 );
+
 theme_create_page('Home');
 theme_create_page('Historia', 'historia.php');
 theme_create_page('Premios', 'premios.php');
@@ -33,4 +57,3 @@ theme_create_page('Doe','doe.php');
 theme_create_page('Socio','socio.php');
 theme_create_page('EnviarProjeto','enviarProjeto.php');
 theme_create_page('Eventos','eventos.php');
-?>
