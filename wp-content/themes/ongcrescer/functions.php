@@ -28,12 +28,15 @@ add_action('pre_get_posts', 'no_rows_found_function');
 
 add_action('init', 'registerFormAction');
 
-    function registerFormAction(){
+function registerFormAction(){
 
-        // To handle the form data we will have to register ajax action. 
-        add_action('wp_ajax_nopriv_submitAjaxForm','submitAjaxForm_callback');
-        add_action('wp_ajax_submitAjaxForm','submitAjaxForm_callback');
+    // To handle the form data we will have to register ajax action. 
+    add_action('wp_ajax_nopriv_submitAjaxForm','submitAjaxForm_callback');
+    add_action('wp_ajax_submitAjaxForm','submitAjaxForm_callback');
 
-    }
+}
 
-?>
+function theme_slug_setup() {
+  add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
