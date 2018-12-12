@@ -38,11 +38,15 @@
                         <div class="col-md-2 voluntario">
                           <a href="<?php echo rwmb_meta("voluntario-link"); ?>" target="blank">
                           <?php
-                              $images = rwmb_meta( 'voluntario-image', array( 'size' => 'thumbnail' ) );
-                              foreach ( $images as $image ) {
-                          ?>
-                            <img src="<?php echo $image["full_url"] ?>" alt="">
-                          <?php } ?>
+                              $images = rwmb_meta( 'voluntario-image', array( 'size' => 'thumbnail' ) ); ?>
+                              <?php
+                              if( !empty( $images ) ) :
+                              foreach ( $images as $image ) : ?>
+                                <img src="<?php echo $image["full_url"] ?>" alt="">
+                              <?php endforeach; ?>
+                                <?php else : ?>
+                                  <img src="<?php echo get_template_directory_uri() . '/images/picture.jpg'; ?>" alt="">
+                              <?php endif;?>
 
                             <div><strong><?php the_title() ?></strong></div>
                           </a>

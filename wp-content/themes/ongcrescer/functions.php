@@ -40,3 +40,31 @@ function theme_slug_setup() {
   add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'theme_slug_setup' );
+
+/**
+ *  Criador de Voluntários
+ */
+function theme_create_voluntarios( $name, $counter = 1 ){
+    if( is_admin() ){
+      if( $counter <= 10 ){
+      $page_name = sprintf("%s %u",$name, $counter);
+      $voluntariado_check = get_page_by_title($page_name, OBJECT, 'ong_voluntario');
+      $new_voluntariado = array(
+        'post_type' => 'ong_voluntario',
+        'post_title' => sprintf("%s %u",$name, $counter),
+        'post_status' => 'publish',
+        'post_author' => 1,
+      );
+      if(!isset($voluntariado_check->ID)){
+        $new_voluntariado_id = wp_insert_post($new_voluntariado);
+      }
+      theme_create_voluntarios( $name, ++$counter );
+    }
+  }
+}
+
+function theme_create_voluntarios_init(){
+  theme_create_voluntarios("Voluntario");
+}
+
+add_action('init', 'theme_create_voluntarios_init');
