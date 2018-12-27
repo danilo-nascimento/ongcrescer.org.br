@@ -35,7 +35,7 @@
 
                 <!-- the loop -->
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <div class="col-md-2 voluntario">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 voluntario">
                           <a href="<?php echo rwmb_meta("voluntario-link"); ?>" target="blank">
                           <?php
                               $images = rwmb_meta( 'voluntario-image', array( 'size' => 'thumbnail' ) ); ?>
