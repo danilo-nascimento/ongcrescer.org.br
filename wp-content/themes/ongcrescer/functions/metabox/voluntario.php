@@ -23,7 +23,8 @@ function metabox_voluntario( $meta_boxes ) {
  				'type' => 'image_advanced',
  				'name' => esc_html__( 'Foto 1x1 do Voluntário', 'metabox-online-generator' ),
  				'desc' => esc_html__( 'Foto do Voluntário', 'metabox-online-generator' ),
- 				'max_file_uploads' => '1',
+				 'max_file_uploads' => '1',
+				 'size' => 'foto-voluntarios',
  			)
 		)
 	);

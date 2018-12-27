@@ -39,7 +39,12 @@ function registerFormAction(){
 function theme_slug_setup() {
   add_theme_support( 'title-tag' );
 }
-add_action( 'after_setup_theme', 'theme_slug_setup' );
+
+add_action( 'after_setup_theme', 'ongcrescer_dimensoes_imagens' );
+function ongcrescer_dimensoes_imagens() {
+  add_image_size( 'foto-voluntarios', 320, 320, true ); // Imagens cropadas para a listagem dos Volunt?rios
+}
+
 
 /**
  *  Criador de Voluntários
