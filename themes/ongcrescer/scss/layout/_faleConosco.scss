@@ -1,0 +1,105 @@
+/* ==|======================
+   Layout/Fale Conosco
+   ========================= */
+
+.l-fale-conosco{
+    background-color: $white-0;
+    margin-top: 1.5em;
+    padding-top: 3em;
+
+
+#form-fale-conosco div{
+    display: inline-block;
+    margin-bottom: 4em;
+    width: 35%;
+}
+
+#form-fale-conosco div:last-child{
+    width: 50%;
+    position: absolute;
+}
+.campo-fale-conosco{
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    display: block;
+    width: 100%;
+}
+
+#textarea-fale-conosco{
+    display: inline-block;
+    width: 95%;
+    margin-left: 2em;
+    margin-top: 1em;
+    height: 390px;
+    float: right;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.enviar-fale-conosco{
+    float: right;
+    margin-left: 1em;
+    margin-top: 1.5em;
+    padding: 20px 50px;
+    background: -moz-linear-gradient(left, orange, #fa7306); 
+background: -webkit-linear-gradient(left, orange, #fa7306); 
+background: -o-linear-gradient(left, orange, #fa7306); 
+background: -ms-linear-gradient(left, orange, #fa7306); 
+background: linear-gradient(left, orange, #fa7306); 
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+#file-fale-conosco{
+  display: none;
+}
+
+#form-fale-conosco label{
+  margin-top: 0;
+}
+
+#contato-fale-conosco{
+    font-weight: 600;
+    font-size: 18pt;
+    margin-top: 6em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+    #textarea-fale-conosco{
+    display: block;
+    width: 100%;
+    margin-left: 0em;
+    margin-top: 2em;
+    height: 290px;
+    float: none;
+}
+
+#form-fale-conosco div{
+   display:block;
+    width: 100%;
+}
+
+#form-fale-conosco div:last-child{
+    width: 100%;
+    position: relative;
+}
+
+.enviar-fale-conosco{
+    float: right;
+    margin-left: 1em;
+    padding: 10px 20px;
+}
+
+#contato-fale-conosco{
+    font-weight: 600;
+    font-size: 18pt;
+    margin-top: 6em;
+    padding-bottom: 2em;
+    word-wrap: break-word;
+}
+}
+}

@@ -1,0 +1,39 @@
+/*
+Theme Name: OngCrescer
+Author: Ong Crescer Team
+Description: Theme for ONG Crescer
+Version: 1.0
+*/
+
+/* Site settings */
+@import "site-settings";
+
+/* Vendor */
+@import "vendor/bootstrap-4.0.0-beta.2.min";
+@import "vendor/font-awesome-4.7.0.min";
+
+/* Base */
+@import "base";
+
+/* Layouts */
+@import "layout/navbar";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main";
+@import "layout/home";
+@import "layout/historia";
+@import "layout/premios";
+@import "layout/projetos";
+@import "layout/login";
+@import "layout/loja";
+@import "layout/blog";
+@import "layout/sobre";
+@import "layout/voluntarios";
+@import "layout/faleConosco";
+@import "layout/doe";
+@import "layout/single";
+@import "layout/socio";
+@import "layout/enviarProjeto";
+@import "layout/eventos";
+
+

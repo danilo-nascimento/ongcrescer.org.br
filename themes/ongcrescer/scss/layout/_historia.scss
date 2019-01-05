@@ -1,0 +1,55 @@
+/* ==|======================
+   Layout/Historia
+   ========================= */
+.l-historia{
+    background-color: $white-0;
+    padding-bottom: 50px;
+
+.div-img{
+    width: 50%;
+     display: inline-block;
+     text-align: right;
+}
+.historia-img{
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    
+    
+}
+
+.historia-ong-item{
+    margin-top: 1em;
+    padding-top: 50px;
+    width: 50%;
+}
+#historia-content{
+    text-align: justify;
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 1em;
+    float: left;
+}
+
+@media screen and (max-width: 768px) {
+    #div-img{
+    width: 100%;
+     display: block;
+}
+    .historia-img{
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    .historia-ong-item{
+        width: 100%;
+    }
+
+    #historia-content{
+        width: 100%;
+        display: block;
+    }
+
+}
+}
