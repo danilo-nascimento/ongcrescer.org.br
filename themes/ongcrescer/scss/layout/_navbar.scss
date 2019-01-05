@@ -1,0 +1,67 @@
+.l-navbar {
+  background: $dark-gray;
+  color: $white-1;
+  padding: 1em;
+  font-size: 0.8em;
+
+  .social-icons {
+    width: 40%;
+    display: inline-block;
+    margin:0;
+    padding: 0;
+    color: $white-1;
+
+    a {
+      color: $white-1;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  .actions {
+    width: 59%;
+    display: inline-block;
+    text-align: right;
+  }
+  .li-navbar{
+      display: inline;
+      margin-left: 3%;
+      border-right: 1px solid;
+      padding-right: 3%
+  }
+  .li-navbar a{
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+  }
+  
+  
+  .li-navbar a:hover{
+      background-color: white;
+      color: black;
+      transition: 1s;
+  }
+  
+  #box-login, #box-cadastrar{
+      display: none;
+  }
+
+
+@media screen and (max-width: 720px) {
+    .l-navbar{
+        .social-icons {
+        width: 100%;
+        text-align: center;
+        }
+        .actions {
+            margin-left: 1%;
+            padding-right: 1%;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+}

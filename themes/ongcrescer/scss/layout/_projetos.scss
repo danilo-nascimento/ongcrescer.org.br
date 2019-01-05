@@ -1,0 +1,134 @@
+.l-projetos {
+
+	margin-top: 1.4em;
+	padding-top: 4em;
+	background: $white-0;
+
+	.title {
+		font-size: 1.8em;
+		font-weight: bold;
+	}
+        
+        #categorias-projetos li{
+                background-color: #f9c509;
+                padding: 0.3em 1em 0.3em 1em;
+                display: inline-block;
+            }
+        
+        #categorias-projetos a{
+                font-size: 11pt;
+                color: white;
+        }
+
+	.titulo-caixa {
+		font-size: 0.98em;
+		font-weight: bold;
+	}
+
+	a {
+		font-size: 10px;
+		color: $white-0;
+		text-align: center;
+	}
+        
+        .div-img-projetos{
+            float: left;
+        }
+
+	.img-circle{
+            border-radius: 100%;
+            height: 120px;
+            width: 120px;
+	}
+
+	.imagem-projetos{
+            width: 250px;
+            height: 250px;
+        }
+        
+        .espaco-linha {
+	margin: 2em 0 2em 0;
+        width: 25%;
+        
+        }
+	
+        .espaco-linha div{
+        background-color: $white-1;
+        width: 250px;
+        }   
+
+	.botoes-baixo {
+		a.btn-default {
+			color: #111;
+	    border: solid 2px #ffc107;
+		}
+		a.btn-default:hover {
+			background-color: #e0a800;
+	    border-color: #d39e00;
+		}
+	}
+
+    .caixa{
+    margin-top: 3em;
+}
+.info{
+    width: 70%;
+    margin-left: 2em;
+    display: inline-block;
+}
+
+.btn-lg{
+    margin: 0.3em;
+}
+
+.causas{
+    display: inline-block;
+}
+
+.espaco-linha-pagination {
+	margin: 4em 0 1em;
+
+	div {
+            font-size: 10pt;
+		color:$white-0
+	}
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .espaco-linha {
+        width: 50%;
+}
+}
+
+@media screen and (max-width: 700px) {
+    .imagem-projetos{
+            width: 100%;
+        }
+        
+    .espaco-linha {
+        width: 100%;
+}
+
+    .espaco-linha div{
+        width: 90%;
+        }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .info{
+        width: 95%;
+        margin-top: 1em;
+        margin-left: 0;
+        
+        .causas{
+            margin-top: 1em;
+        }
+    }
+    #categorias-projetos li{
+                margin-top: 1em;
+            }
+}
+}
